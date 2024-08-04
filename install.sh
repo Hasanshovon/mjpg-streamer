@@ -34,10 +34,10 @@ Description=mjpg-streamer service
 After=network.target
 
 [Service]
-ExecStart=/home/pi/mjpg-streamer/mjpg-streamer-experimental/start.sh
-WorkingDirectory=/home/pi/mjpg-streamer/mjpg-streamer-experimental/
+ExecStart=/home/$(whoami)/mjpg-streamer/mjpg-streamer-experimental/start.sh
+WorkingDirectory=/home/$(whoami)/mjpg-streamer/mjpg-streamer-experimental/
 Restart=always
-User=pi
+User=$(whoami)
 
 [Install]
 WantedBy=multi-user.target
