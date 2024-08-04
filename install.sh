@@ -39,23 +39,12 @@ Description=mjpg-streamer service
 After=network.target
 
 
-if [ "$(whoami)" == "pi" ]; then
-    [Service]
-    ExecStart=/home/pi/mjpg-streamer/mjpg-streamer-experimental/start.sh
-    WorkingDirectory=/home/pi/mjpg-streamer/mjpg-streamer-experimental/
-    Restart=always
-    User=pi
-elif [ "$(whoami)" == "jetson" ]; then
-    ExecStart=/home/jetson/mjpg-streamer/mjpg-streamer-experimental/start.sh
-    WorkingDirectory=/home/jetson/mjpg-streamer/mjpg-streamer-experimental/
-    Restart=always
-    User=jetson
-fi
+
 [Service]
-ExecStart=/home/$(whoami)/mjpg-streamer/mjpg-streamer-experimental/start.sh
-WorkingDirectory=/home/$(whoami)/mjpg-streamer/mjpg-streamer-experimental/
+ExecStart=/home/pi/mjpg-streamer/mjpg-streamer-experimental/start.sh
+WorkingDirectory=/home/pi/mjpg-streamer/mjpg-streamer-experimental/
 Restart=always
-User=$(whoami)
+User=pi
 
 [Install]
 WantedBy=multi-user.target
