@@ -18,8 +18,8 @@ make
 sudo make install
 
 # Clean up
-cd ../..
-rm -rf mjpg-streamer
+#cd ../..
+#rm -rf mjpg-streamer
 
 echo "mjpg-streamer installation completed successfully."
 
