@@ -5,12 +5,7 @@ set -e
 
 # Update package list and install dependencies
 sudo apt update
-
-if [ "$(whoami)" == "pi" ]; then
-    sudo apt install -y git cmake build-essential libjpeg62-turbo-dev
-else
-    sudo apt install -y git cmake build-essential libjpeg8
-fi
+sudo apt install -y git cmake build-essential libjpeg62-turbo-dev
 
 # Clone the repository
 git clone https://github.com/Hasanshovon/mjpg-streamer.git
@@ -37,8 +32,6 @@ sudo bash -c 'cat > /etc/systemd/system/mjpg-streamer.service <<EOF
 [Unit]
 Description=mjpg-streamer service
 After=network.target
-
-
 
 [Service]
 ExecStart=/home/pi/mjpg-streamer/mjpg-streamer-experimental/start.sh
