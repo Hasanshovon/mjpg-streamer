@@ -4,7 +4,8 @@
 set -e
 
 # Optionally, remove the source directory if it still exists
-rm -rf ~/mjpg-streamer
+sudo rm -rf ~/mjpg-streamer
+echo "Directory removed"
 
 # Stop the service
 sudo systemctl stop mjpg-streamer.service
