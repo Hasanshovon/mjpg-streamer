@@ -22,3 +22,33 @@ cd ../..
 rm -rf mjpg-streamer
 
 echo "mjpg-streamer installation completed successfully."
+
+# Run start.sh
+./start.sh
+echo "mjpg-streamer started successfully."
+
+# Create systemd service file
+sudo bash -c 'cat > /etc/systemd/system/mjpg-streamer.service <<EOF
+[Unit]
+Description=mjpg-streamer service
+After=network.target
+
+[Service]
+ExecStart=/home/pi/mjpg-streamer/mjpg-streamer-experimental/start.sh
+WorkingDirectory=/home/pi/mjpg-streamer/mjpg-streamer-experimental/
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+EOF'
+
+# Reload systemd, enable and start the service
+sudo systemctl daemon-reload
+sudo systemctl enable mjpg-streamer.service
+sudo systemctl start mjpg-streamer.service
+
+# Check the status of the service
+sudo systemctl status mjpg-streamer.service
+
+echo "mjpg-streamer service installed and started successfully."
