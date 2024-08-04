@@ -20,9 +20,9 @@ sudo rm /etc/systemd/system/mjpg-streamer.service
 sudo systemctl daemon-reload
 
 # Remove the installed binaries
-sudo rm /usr/local/bin/mjpg_streamer
-sudo rm /usr/local/bin/input_uvc.so
-sudo rm /usr/local/bin/output_http.so
+#sudo rm /usr/local/bin/mjpg_streamer
+#sudo rm /usr/local/bin/input_uvc.so
+#sudo rm /usr/local/bin/output_http.so
 
 
 
