@@ -3,7 +3,7 @@
 wget -qO- https://raw.githubusercontent.com/Hasanshovon/mjpg-streamer/master/install.sh | bash
 
 ## Jetson
-wget -qO- https://raw.githubusercontent.com/Hasanshovon/mjpg-streamer/master/install.sh | bash 
+wget -qO- https://raw.githubusercontent.com/Hasanshovon/mjpg-streamer/master/install-jetson.sh | bash 
 
 # Uninstall
 
