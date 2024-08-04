@@ -5,7 +5,7 @@ set -e
 
 # Update package list and install dependencies
 sudo apt update
-sudo apt install -y git cmake build-essential libjpeg8-dev
+sudo apt install -y git cmake build-essential libjpeg62-turbo-dev
 
 # Clone the repository
 git clone https://github.com/Hasanshovon/mjpg-streamer.git
