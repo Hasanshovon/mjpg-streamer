@@ -24,8 +24,8 @@ sudo make install
 echo "mjpg-streamer installation completed successfully."
 
 # Run start.sh
-./start.sh
-echo "mjpg-streamer started successfully."
+#./start.sh
+#echo "mjpg-streamer started successfully."
 
 # Create systemd service file
 sudo bash -c 'cat > /etc/systemd/system/mjpg-streamer.service <<EOF
